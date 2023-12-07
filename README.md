@@ -1,6 +1,5 @@
 # opencv Practice
 
-<hr>
 
 Step by step image processing exercises with opencv library. Comprehensive and complete examples.
 
