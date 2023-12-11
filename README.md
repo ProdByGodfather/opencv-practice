@@ -11,5 +11,5 @@ A package containing interesting exercises along with usage examples and discove
 
 Install the libraries from `requirements.txt` file with this command.
 ```
-    pip install -r requirments.txt
+pip install -r requirments.txt
 ```
