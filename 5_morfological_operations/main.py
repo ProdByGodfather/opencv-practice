@@ -23,13 +23,14 @@ delated_image = cv2.dilate(mask, kernel, iterations=1)
 closed_image = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
 # Opening
-
+opened_image = cv2.morphologyEx(mask,cv2.MORPH_OPEN,kernel)
 
 # Gradiant
 
+gradiant = cv2.morphologyEx(mask,cv2.MORPH_GRADIENT,kernel)
 
 # Show Image With Plot
-fig,(ax1,ax2,ax3,ax4,ax5) = plt.subplots(nrows=1, ncols=5, figsize=(10,20))
+fig,(ax1,ax2,ax3,ax4,ax5,ax6,ax7) = plt.subplots(nrows=1, ncols=7, figsize=(12,20))
 cmap_val = "gray"
 ax1.axis("off")
 ax1.title.set_text('original image')
@@ -41,10 +42,16 @@ ax4.axis("off")
 ax4.title.set_text('dilated image')
 ax5.axis("off")
 ax5.title.set_text('closed image')
+ax6.axis("off")
+ax6.title.set_text('morphed image')
+ax7.axis("off")
+ax7.title.set_text('Gradiant image')
 ax1.imshow(img,cmap=cmap_val)
 ax2.imshow(mask,cmap=cmap_val)
 ax3.imshow(eroded_image,cmap=cmap_val)
 ax4.imshow(delated_image,cmap=cmap_val)
 ax5.imshow(closed_image,cmap=cmap_val)
+ax6.imshow(opened_image,cmap=cmap_val)
+ax7.imshow(gradiant,cmap=cmap_val)
 
 plt.show()
